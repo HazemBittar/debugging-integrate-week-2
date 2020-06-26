@@ -20,7 +20,24 @@ function repeatStringHandler() {
   let repeatedString;
   for (let i = 1; i < range; i++) {
     repeatedString += repeatedString;
-  }
+  }function repeatStringHandler() {
+    debugger;
+    
+  
+    // read inputs from user
+    const stringToRepeat = prompt('enter a string to repeat');
+    console.log('stringToRepeat:', typeof stringToRepeat, '\n', stringToRepeat);
+    
+  
+    // perform core logic
+    let repeatedString='';
+    for (let i = 1; i < range; i++) {
+      repeatedString += stringToRepeat;
+    }
+    console.log('repeatedString:', typeof repeatedString, '\n', repeatedString);
+    if (stringToRepeat == null) {
+      return repeatedString;
+    }
   console.log('repeatedString:', typeof repeatedString, '\n', repeatedString);
 
   // alert result for the user
