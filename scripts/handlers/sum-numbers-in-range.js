@@ -13,6 +13,7 @@ function sumNumbersInRangeHandler() {
   for (let i = 0; i <= range; i++) {
     sum += i;
   }
+  
   console.log('sum:', typeof sum, '\n', sum);
 
   // alert result for the user

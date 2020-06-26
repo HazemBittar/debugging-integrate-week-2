@@ -22,28 +22,17 @@ function evensOrOddsHandler() {
       "2, 4, 6, 8, "
     ...
   */
- let listedNumbers = '';
- let i;
- if(displayEvens)
- for (i=1;i<=range; i++) {
-   
-   if(i % 2){
-     listedNumbers = listedNumbers;
-   } else{
-     
-     listedNumbers+= `${i},`
-   }
- } else{
-   for (i=1;i<=range; i++) {
-     if(i % 2){
-       listedNumbers+= `${i},`
-     } else{
-       listedNumbers = listedNumbers;
-     }
-   }
+  let listedNumbers = '';
+  for (let i = 1; i <= range; i++) {
 
-   
- }
+    if(displayEvens && i % 2 == 0) {
+      listedNumbers += i + ", " ;
+    } 
+    if (displayEvens == false && i % 2 !== 0) {
+      listedNumbers += i + ", ";
+    }
+    
+  }
   console.log('listedNumbers:', typeof listedNumbers, '\n', listedNumbers);
 
   // alert result for the user
